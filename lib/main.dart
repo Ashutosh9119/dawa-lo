@@ -12,9 +12,9 @@ class DawaLo extends StatelessWidget {
   const DawaLo({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: LoginScreen(),
+        body: HomeScreen(),
       ),
     );
   }

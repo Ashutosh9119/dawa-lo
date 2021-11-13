@@ -1,3 +1,4 @@
+import 'package:dawalo/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -28,39 +29,47 @@ class LoginScreen extends StatelessWidget {
             ),
             height: 100,
             width: 100,
-            child: Icon(
+            child: const Icon(
               Icons.person,
               size: 50,
               color: Colors.white,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          TextField(
+          const TextField(
             decoration:
                 InputDecoration(border: OutlineInputBorder(), hintText: "Name"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          TextField(
+          const TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), hintText: "Gendre"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          TextField(
+          const TextField(
             decoration:
                 InputDecoration(border: OutlineInputBorder(), hintText: "Age"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           MaterialButton(
-            onPressed: () {},
-            child: Text(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (builder) {
+                    return const HomeScreen();
+                  },
+                ),
+              );
+            },
+            child: const Text(
               "Login",
               style: TextStyle(color: Colors.white),
             ),
