@@ -1,4 +1,5 @@
 import 'package:dawalo/home.dart';
+import 'package:dawalo/medicineform.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +12,7 @@ class DawaLo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Dawa Lo"),
-        ),
-        body: HomeScreen(),
+        body: MedicineForm(),
       ),
     );
   }
