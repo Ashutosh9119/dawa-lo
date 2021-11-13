@@ -28,21 +28,21 @@ class MedicineForm extends StatelessWidget {
             ),
             TextField(
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Medicine'),
+                  border: OutlineInputBorder(), hintText: 'Medicine 1'),
             ),
             SizedBox(
               height: 20,
             ),
             TextField(
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: "Medicine"),
+                  border: OutlineInputBorder(), hintText: "Medicine 2"),
             ),
             SizedBox(
               height: 20,
             ),
             TextField(
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Medicine'),
+                  border: OutlineInputBorder(), hintText: 'Medicine 3'),
             ),
             SizedBox(
               height: 20,
