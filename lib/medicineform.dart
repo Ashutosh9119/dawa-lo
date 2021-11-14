@@ -22,59 +22,61 @@ class _MedicineFormState extends State<MedicineForm> {
         backgroundColor: Colors.green,
         title: Text("Dawa Lo"),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Disease Name'),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Add Medicine",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            ...medicines,
-            SizedBox(
-              height: 60,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.green,
-                boxShadow: [
-                  BoxShadow(
-                    color: (Colors.green[700])!,
-                    blurRadius: 50,
-                    offset: Offset(0, 0),
-                    spreadRadius: 5,
-                  )
-                ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextField(
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(), hintText: 'Disease Name'),
               ),
-              width: double.infinity,
-              child: IconButton(
-                onPressed: () {
-                  setState(() {
-                    count += 1;
-                    medicines.add(SingleMedicine(count));
-                  });
-                },
-                icon: Icon(
-                  Icons.add,
-                  size: 60,
-                  color: Colors.white,
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Add Medicine",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              ...medicines,
+              SizedBox(
+                height: 60,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
+                  boxShadow: [
+                    BoxShadow(
+                      color: (Colors.green[700])!,
+                      blurRadius: 50,
+                      offset: Offset(0, 0),
+                      spreadRadius: 5,
+                    )
+                  ],
                 ),
-              ),
-              height: 80,
-            )
-          ],
+                width: double.infinity,
+                child: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      count += 1;
+                      medicines.add(SingleMedicine(count));
+                    });
+                  },
+                  icon: Icon(
+                    Icons.add,
+                    size: 60,
+                    color: Colors.white,
+                  ),
+                ),
+                height: 80,
+              )
+            ],
+          ),
         ),
       ),
     );
